@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Calculator</title>
+<style>
+body{font-family:Arial;display:flex;justify-content:center;align-items:center;height:100vh;background:#eef2ff}
+.box{background:white;padding:30px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);width:300px;text-align:center}
+input, select, button{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc}
+button{background:#1e2a5a;color:white;border:none;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Calculator</h2>
+<form method="POST">
+<input type="number" step="any" name="num1" placeholder="First number" required>
+<input type="number" step="any" name="num2" placeholder="Second number" required>
+<select name="operation">
+<option value="add">ADD (+)</option>
+<option value="subtract">SUBTRACT (-)</option>
+<option value="multiply">MULTIPLY (*)</option>
+<option value="divide">DIVIDE (/)</option>
+</select>
+<button type="submit">Calculate</button>
+</form>
+<h3>Result: {{ result }}</h3>
+</div>
+</body>
+</html>
